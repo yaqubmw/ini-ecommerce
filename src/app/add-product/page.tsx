@@ -1,5 +1,5 @@
 import FormSubmitButton from "@/components/FormSubmitButton";
-import { prisma } from "@/lib/db/prisma";
+import prisma from "@/lib/db/prisma";
 import { redirect } from "next/navigation";
 
 export const metadata = {
@@ -56,9 +56,7 @@ export default function AddProductPage() {
           type="number"
           className="input input-bordered mb-3 w-full"
         />
-        <FormSubmitButton className="btn-block">
-          Add Product
-        </FormSubmitButton>
+        <FormSubmitButton className="btn-block">Add Product</FormSubmitButton>
       </form>
     </div>
   );
