@@ -6,5 +6,11 @@ interface PriceTagProps {
 }
 
 export default function PriceTag({ price, className }: PriceTagProps) {
-  return <span className={`badge ${className}`}>{formatPrice(price)}</span>;
+  return (
+    <span
+      className={`inline-flex w-fit items-center justify-center transition-all ${className}`}
+    >
+      {formatPrice(price)}
+    </span>
+  );
 }

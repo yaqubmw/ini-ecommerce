@@ -15,7 +15,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       href={"/products/" + product.id}
-      className="card w-full bg-white shadow transition-shadow hover:shadow-lg"
+      className="card w-full rounded bg-white shadow transition-shadow hover:shadow-lg"
     >
       <figure>
         <Image
@@ -33,7 +33,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </h2>
         {/* <p>{product.description}</p> */}
         <PriceTag
-          className="bg-transparent text-sm font-semibold"
+          className="text-sm font-semibold text-primary"
           price={product.price}
         />
       </div>
