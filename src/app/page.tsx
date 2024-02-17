@@ -13,7 +13,7 @@ export default async function Home() {
 
   return (
     <div>
-      <div className="hero h-screen rounded bg-slate-100">
+      <div className="hero lg:h-screen rounded bg-slate-100">
         <div className="hero-content flex-col lg:flex-row">
           <Image
             src={products[0].imageUrl}
@@ -23,7 +23,7 @@ export default async function Home() {
             className="w-full max-w-64 rounded object-cover object-center shadow-sm lg:max-w-sm"
             priority
           />
-          <div>
+          <div className="py-4">
             <h1 className="text-5xl font-bold">{products[0].name}</h1>
             <p className="text-pretty py-6 text-justify">
               {products[0].description}

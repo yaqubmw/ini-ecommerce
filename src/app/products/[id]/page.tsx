@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { cache } from "react";
+import AddToCartButton from "./AddToCartButton";
 
 interface ProductPageProps {
   params: {
@@ -48,13 +49,14 @@ export default async function ProductPage({
           priority
         />
       </div>
-      <div className="mx-3 mb-4 mt-6 lg:mx-8 lg:mb-12 lg:mt-24 lg:w-7/12">
+      <div className="mx-4 my-6 lg:mx-8 lg:mb-12 lg:mt-24 lg:w-7/12">
         <h1 className="text-4xl font-bold">{product.name}</h1>
         <PriceTag
           price={product.price}
           className="mt-4 text-lg font-semibold text-primary"
         />
-        <p className="py-6">{product.description}</p>
+        <p className="text-pretty py-6 text-justify">{product.description}</p>
+        <AddToCartButton productId={product.id} />
       </div>
     </div>
   );
