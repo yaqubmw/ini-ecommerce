@@ -41,11 +41,11 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
       </label>
       <div
         tabIndex={0}
-        className="card dropdown-content z-30 mt-3 w-52 bg-base-100 shadow"
+        className="card dropdown-content z-30 mt-3 w-52 md:w-80 bg-base-100 shadow"
       >
         <div className="card-body">
           <span className="text-lg font-bold">{cart?.size || 0} Items</span>
-          <span className="text-info">
+          <span className="text-sm text-info">
             Subtotal: {formatPrice(cart?.subtotal || 0)}
           </span>
           <div className="card-actions">
