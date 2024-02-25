@@ -27,7 +27,7 @@ async function addProduct(formData: FormData) {
 
 export default function AddProductPage() {
   return (
-    <div>
+    <div className="mx-4 flex flex-col items-center justify-center gap-2 md:mx-24">
       <h1 className="mb-3 text-lg font-bold">Add Product</h1>
       <form action={addProduct}>
         <input

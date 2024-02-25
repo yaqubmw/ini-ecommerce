@@ -28,6 +28,11 @@ export async function generateMetadata({
     description: product.description,
     openGraph: {
       images: [{ url: product.imageUrl }],
+      url: `/products/${product.id}`,
+      type: "website",
+    },
+    alternates: {
+      canonical: `/products/${product.id}`,
     },
   };
 }
@@ -45,7 +50,7 @@ export default async function ProductPage({
           alt={product.name}
           width={400}
           height={800}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-top"
           priority
         />
       </div>
