@@ -8,7 +8,7 @@ interface ProductHeroProps {
 
 export default function ProductHero({ product }: ProductHeroProps) {
   return (
-    <div className="hero rounded bg-slate-100 lg:h-screen">
+    <div className="hero rounded bg-primary-content lg:h-screen">
       <div className="hero-content flex-col items-center md:flex-row">
         <Image
           src={product.imageUrl}
@@ -18,7 +18,7 @@ export default function ProductHero({ product }: ProductHeroProps) {
           className="w-full max-w-64 rounded object-cover object-center shadow-sm md:max-w-sm"
           priority
         />
-        <div className="flex flex-col justify-center py-4 items-center md:items-start">
+        <div className="flex flex-col items-center justify-center py-4 md:items-start">
           <h1 className="text-center text-5xl font-bold md:text-left">
             {product.name}
           </h1>

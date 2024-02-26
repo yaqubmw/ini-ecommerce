@@ -10,32 +10,28 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const isNew =
     Date.now() - new Date(product.createdAt).getTime() <
-    1000 * 60 * 60 * 24 * 7;
+    1000 * 60 * 60 * 24 * 17;
 
   return (
-    <Link
-      href={"/products/" + product.id}
-      className="card w-full rounded bg-white shadow transition-shadow hover:shadow-lg"
-    >
-      <figure>
+    <Link href={"/products/" + product.id} className="card w-full rounded-none">
+      <figure className="relative">
         <Image
           src={product.imageUrl}
           alt={product.name}
           width={300}
           height={900}
-          className="h-64 w-full object-cover object-center"
+          className="top-0 z-10 h-56 w-full object-cover object-center"
         />
+        {isNew && (
+          <div className="badge badge-primary badge-sm absolute right-0 top-2 z-10 rounded-badge rounded-r-none px-4 py-3 font-bold">
+            New
+          </div>
+        )}
       </figure>
-      <div className="card-body flex-col justify-between">
-        <h2 className="card-title text-lg">
-          {product.name}
-          {isNew && <div className="badge badge-secondary badge-sm">New</div>}
-        </h2>
+      <div className="my-4 flex-col">
+        <h2 className="card-title text-sm">{product.name}</h2>
         {/* <p>{product.description}</p> */}
-        <PriceTag
-          className="text-sm font-semibold text-primary"
-          price={product.price}
-        />
+        <PriceTag className="text-lg font-bold" price={product.price} />
       </div>
     </Link>
   );

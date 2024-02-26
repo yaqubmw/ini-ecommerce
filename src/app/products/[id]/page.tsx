@@ -43,25 +43,27 @@ export default async function ProductPage({
   const product = await getProduct(id);
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between">
-      <div className="h-[75vh] w-full lg:h-[100vh] lg:w-4/12">
+    <div className="flex flex-col md:flex-row md:justify-between">
+      <div className="h-[75vh] w-full md:h-[100vh] md:w-4/12">
         <Image
           src={product.imageUrl}
           alt={product.name}
           width={400}
           height={800}
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-center"
           priority
         />
       </div>
-      <div className="mx-4 my-6 lg:mx-8 lg:mb-12 lg:mt-24 lg:w-7/12">
+      <div className="mx-4 my-6 md:mx-8 md:mb-12 md:mt-24 md:w-7/12">
         <h1 className="text-4xl font-bold">{product.name}</h1>
-        <PriceTag
-          price={product.price}
-          className="mt-4 text-lg font-semibold text-primary"
-        />
-        <p className="text-pretty py-6 text-justify">{product.description}</p>
-        <AddToCartButton productId={product.id} />
+        <p className="text-pretty py-6 text-justify text-sm">{product.description}</p>
+        <div className="flex flex-col md:flex-row w-full items-center justify-between gap-3 rounded border p-2 shadow">
+          <PriceTag
+            price={product.price}
+            className="text-lg font-bold"
+          />
+          <AddToCartButton productId={product.id} />
+        </div>
       </div>
     </div>
   );

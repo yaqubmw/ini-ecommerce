@@ -21,8 +21,12 @@ export default async function Navbar() {
     <div className="flex w-full items-center bg-base-100">
       <div className="navbar flex-col items-center gap-2 sm:flex-row">
         <div className="flex-1">
-          <Link href={"/"} className="btn btn-square">
+          <Link
+            href={"/"}
+            className="flex items-center gap-2 opacity-100 transition-opacity duration-500 hover:opacity-70"
+          >
             <Image src={Logo} width={36} height={36} alt="IniEcommerce" />
+            <span className="text-lg font-bold">IniEcommerce</span>
           </Link>
         </div>
         <div className="flex-none gap-2">
@@ -36,7 +40,7 @@ export default async function Navbar() {
               />
             </div>
           </form>
-        <ShoppingCartButton cart={cart} />
+          <ShoppingCartButton cart={cart} />
         </div>
       </div>
     </div>
