@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main className="m-auto">{children}</main>
+        <main className="m-auto text-pretty antialiased">{children}</main>
         <Footer />
       </body>
     </html>
