@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <SessionProvider>
           <Navbar />
-          <main className="m-auto text-pretty antialiased">{children}</main>
+          <main className="m-auto">{children}</main>
           <Footer />
         </SessionProvider>
       </body>

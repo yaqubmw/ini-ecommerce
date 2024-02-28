@@ -18,11 +18,11 @@ async function searchProducts(formData: FormData) {
 }
 
 export default async function Navbar() {
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession(authOptions);
   const cart = await getCart();
 
   return (
-    <div className="flex w-full items-center bg-base-100">
+    <div className="flex w-full items-center bg-base-100 px-1 md:px-6">
       <div className="navbar flex-col items-center gap-2 sm:flex-row">
         <div className="flex-1">
           <Link
@@ -44,9 +44,9 @@ export default async function Navbar() {
               />
             </div>
           </form>
-          <div className="flex items-center">
-            <UserMenuButton session={session} />
+          <div className="flex items-center gap-2">
             <ShoppingCartButton cart={cart} />
+            <UserMenuButton session={session} />
           </div>
         </div>
       </div>

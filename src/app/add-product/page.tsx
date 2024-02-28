@@ -53,28 +53,28 @@ export default async function AddProductPage() {
         <input
           required
           name="name"
-          placeholder="Name"
-          className="input mb-3 w-full shadow"
+          placeholder="Product Name"
+          className="input mb-3 w-full shadow text-sm"
         />
         <textarea
           required
           name="description"
-          placeholder="Description"
-          className="textarea mb-3 w-full shadow"
+          placeholder="Product Description"
+          className="textarea mb-3 w-full shadow text-sm"
         />
         <input
           required
           name="imageUrl"
-          placeholder="Image URL"
+          placeholder="Product Image URL"
           type="url"
-          className="input mb-3 w-full shadow"
+          className="input mb-3 w-full shadow text-sm"
         />
         <input
           required
           name="price"
-          placeholder="Price"
+          placeholder="Product Price"
           type="number"
-          className="input mb-10 w-full shadow"
+          className="input mb-10 w-full shadow text-sm"
         />
         <FormSubmitButton className="btn-block max-w-52">
           Add Product
