@@ -18,7 +18,10 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
 
   return (
     <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost hover:bg-inherit hover:text-primary">
+      <label
+        tabIndex={0}
+        className="btn btn-circle btn-ghost btn-md hover:bg-primary-content hover:text-primary"
+      >
         <div className="indicator">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +29,7 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="h-5 w-5"
+            className="h-8 w-8"
           >
             <path
               strokeLinecap="round"
@@ -41,11 +44,11 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
       </label>
       <div
         tabIndex={0}
-        className="card dropdown-content z-30 mt-3 w-52 bg-base-100 shadow md:w-80"
+        className="card dropdown-content z-30 mt-3 w-52 bg-teal-100 shadow md:w-80"
       >
         <div className="card-body">
           <span className="text-base font-bold">{cart?.size || 0} Items</span>
-          <span className="text-sm text-info pb-2">
+          <span className="pb-2 text-sm text-info">
             Subtotal: {formatPrice(cart?.subtotal || 0)}
           </span>
           <div className="card-actions">

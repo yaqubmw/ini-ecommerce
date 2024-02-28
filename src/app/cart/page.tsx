@@ -4,6 +4,9 @@ import { formatPrice } from "@/lib/format";
 
 export const metadata = {
   title: "Your Cart - IniEcommerce",
+  alternates: {
+    canonical: "/cart",
+  },
 };
 
 export default async function CartPage() {
