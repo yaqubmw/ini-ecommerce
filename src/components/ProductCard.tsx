@@ -10,7 +10,7 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const isNew =
     Date.now() - new Date(product.createdAt).getTime() <
-    1000 * 60 * 60 * 24 * 17;
+    1000 * 60 * 60 * 24 * 7;
 
   return (
     <Link href={"/products/" + product.id} className="card w-full rounded-none">
