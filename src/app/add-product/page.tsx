@@ -2,7 +2,7 @@ import FormSubmitButton from "@/components/FormSubmitButton";
 import prisma from "@/lib/db/prisma";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import authOptions from "../api/auth/[...nextauth]/options";
 
 export const metadata = {
   title: "Add Product - IniEcommerce",
@@ -54,27 +54,27 @@ export default async function AddProductPage() {
           required
           name="name"
           placeholder="Product Name"
-          className="input mb-3 w-full shadow text-sm"
+          className="input mb-3 w-full text-sm shadow"
         />
         <textarea
           required
           name="description"
           placeholder="Product Description"
-          className="textarea mb-3 w-full shadow text-sm"
+          className="textarea mb-3 w-full text-sm shadow"
         />
         <input
           required
           name="imageUrl"
           placeholder="Product Image URL"
           type="url"
-          className="input mb-3 w-full shadow text-sm"
+          className="input mb-3 w-full text-sm shadow"
         />
         <input
           required
           name="price"
           placeholder="Product Price"
           type="number"
-          className="input mb-10 w-full shadow text-sm"
+          className="input mb-10 w-full text-sm shadow"
         />
         <FormSubmitButton className="btn-block max-w-52">
           Add Product
