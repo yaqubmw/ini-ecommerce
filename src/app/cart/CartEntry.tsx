@@ -143,6 +143,7 @@ export default function CartEntry({
           </div>
         </div>
       </div>
+      <div className="divider" />
     </div>
   );
 }

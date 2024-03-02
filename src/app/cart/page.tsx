@@ -18,13 +18,7 @@ export default async function CartPage() {
         Shopping Cart
       </h1>
       {cart?.items.map((cartItem) => (
-        <div
-          key={cartItem.id}
-          className="flex flex-col items-center justify-center"
-        >
-          <CartEntry cartItem={cartItem} />
-          <div className="divider" />
-        </div>
+          <CartEntry cartItem={cartItem} key={cartItem.id} />
       ))}
       {!cart?.items.length && (
         <p className="flex items-center justify-center font-medium">
