@@ -5,11 +5,12 @@ import Navbar from "./Navbar/Navbar";
 import OpenGraphHome from "@/assets/opengraph.png";
 import Footer from "./Footer";
 import SessionProvider from "./SessionProvider";
+import { env } from "@/lib/env";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL( env.META_BASE_URL || "http://localhost:3000"),
   title: "IniEcommerce",
   description: "We love your wallet",
   openGraph: {
