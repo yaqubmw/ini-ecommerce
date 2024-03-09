@@ -45,7 +45,7 @@ export function UserMenuButton({ session }: UserMenuButtonProps) {
         tabIndex={0}
         className="menu dropdown-content menu-sm z-30 mt-3 w-52 rounded-box bg-slate-50 p-2 shadow md:w-80"
       >
-        <li>
+        <div>
           {user ? (
             <div className="flex flex-col items-center justify-center gap-4">
               <span className="font-semibold">Hello, {user.name}</span>
@@ -83,7 +83,7 @@ export function UserMenuButton({ session }: UserMenuButtonProps) {
               </button>
             </div>
           )}
-        </li>
+        </div>
       </ul>
     </div>
   );
