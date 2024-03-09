@@ -11,13 +11,11 @@ export default async function Home({
   searchParams: { page = "1" },
 }: HomeProps) {
   const currentPage = parseInt(page);
-  const pageSize = 6;
+  const pageSize = 4;
   const heroItemCount = 1;
-
   const totalItemCount = await prisma.product.count();
-
   const totalPage = Math.ceil((totalItemCount - heroItemCount) / pageSize);
-
+  
   const products = await prisma.product.findMany({
     orderBy: {
       createdAt: "desc",

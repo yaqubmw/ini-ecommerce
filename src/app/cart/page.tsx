@@ -13,7 +13,7 @@ export default async function CartPage() {
   const cart = await getCart();
 
   return (
-    <div className="mx-4 mb-12">
+    <div className="mx-4 mb-12 min-h-screen">
       <h1 className="my-6 flex items-center justify-center text-lg font-bold">
         Shopping Cart
       </h1>
@@ -21,9 +21,9 @@ export default async function CartPage() {
           <CartEntry cartItem={cartItem} key={cartItem.id} />
       ))}
       {!cart?.items.length && (
-        <p className="flex items-center justify-center font-medium">
+        <div className="flex items-center justify-center font-medium">
           Your cart is empty
-        </p>
+        </div>
       )}
       {!cart?.items.length || (
         <div className="flex items-center justify-end gap-3">

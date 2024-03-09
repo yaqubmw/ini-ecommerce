@@ -29,14 +29,14 @@ export default async function SearchPage({
 
   if (products.length === 0) {
     return (
-      <div className="flex items-center justify-center text-center">
-        No products found
+      <div className="flex min-h-screen items-center justify-center text-center text-xl text-slate-600">
+        No products found.
       </div>
     );
   }
 
   return (
-    <div className="mx-4 my-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="mx-4 my-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-screen">
       {products.map((product) => (
         <ProductCard product={product} key={product.id} />
       ))}

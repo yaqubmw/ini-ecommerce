@@ -12,12 +12,12 @@ export type CartItemWithProducts = Prisma.CartItemGetPayload<{
   include: { product: true };
 }>;
 
-export type ShoppingChart = CartWithProducts & {
+export type ShoppingCart = CartWithProducts & {
   size: number;
   subtotal: number;
 };
 
-export async function getCart(): Promise<ShoppingChart | null> {
+export async function getCart(): Promise<ShoppingCart | null> {
   const session = await getServerSession(authOptions);
 
   let cart: CartWithProducts | null = null;
@@ -51,7 +51,7 @@ export async function getCart(): Promise<ShoppingChart | null> {
   };
 }
 
-export async function createCart(): Promise<ShoppingChart> {
+export async function createCart(): Promise<ShoppingCart> {
   const session = await getServerSession(authOptions);
 
   let newCart: Cart;
