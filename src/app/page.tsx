@@ -1,4 +1,3 @@
-import ProductHero from "@/components/ProductHero";
 import ProductCard from "@/components/ProductCard";
 import prisma from "@/lib/db/prisma";
 import PaginationBar from "@/components/PaginationBar";
