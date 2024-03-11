@@ -75,9 +75,9 @@ export default function Slider({ products }: SliderProps) {
               className="w-full"
             >
               <div className="flex flex-col justify-normal gap-10 p-6 pb-8">
-                <h1 className="relative text-pretty text-3xl font-bold leading-7">
+                <h2 className="relative text-pretty text-3xl font-bold leading-7">
                   {product.name}
-                </h1>
+                </h2>
                 <p className="relative text-pretty text-justify text-sm leading-relaxed tracking-wide">
                   {product.description}
                 </p>
