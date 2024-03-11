@@ -31,7 +31,7 @@ export default function Slider({ products }: SliderProps) {
       setActiveCarousel(
         (prevCarousel) => (prevCarousel + 1) % heroProducts.length,
       );
-    }, 3000);
+    }, 5000);
     return () => {
       clearInterval(timer);
     };
