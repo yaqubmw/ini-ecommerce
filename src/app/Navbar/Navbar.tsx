@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/logo.png";
-import { redirect } from "next/navigation";
 import { getCart } from "@/lib/db/cart";
 import { ShoppingCartButton } from "./ShoppingCartButton";
 import { getServerSession } from "next-auth";
